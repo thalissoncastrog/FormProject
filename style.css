@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans';
+}
+body{
+    background: linear-gradient(45deg, #9DDEFF ,#9BDFFF);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+main.container{
+    background: #FFFFFF;
+    max-width: 1200px;
+    max-height: 90vh;
+    padding: 3rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+main h2{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.input-field,.input-field-child {
+    display: flex;
+    width:100%;
+} 
+
+.input-field-child input{
+    width: 100%;
+}
+
+.input-field input, select, textarea{
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 0.6rem;
+    border-radius: 4px;
+    width:100%;
+    background-color: #FFFFFF;
+}
+
+.input-field input:focus ,select:focus, textarea:focus {
+    outline: none !important;
+    border:1px  solid #9DDEFF;
+}
+
+form input[type="submit"]{
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(to left, #0175C0, #0175BE);
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 4px;
+    float: right;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 3px;
+}
+
+ .container form div{
+     position: relative;
+ }
+ .span-default{
+    position: absolute;
+    top:19px;
+    left: 25px;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+ }
+
+.span-email{
+    position: absolute;
+    top:19px;
+    left: 25px;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+ }
+
+.container #email:focus ~ .span-email,
+.container #email:valid ~ .span-email{
+     top:9px;
+     color: #9DDEFF;
+     font-size: 9px;
+     font-weight: bold;
+ } 
+ 
+.container input:focus ~ .span-default, 
+.container input:valid ~ .span-default, 
+.container textarea:focus ~ .span-default, 
+.container textarea:valid ~ .span-default{
+    top:9px;
+    color: #9DDEFF;
+    font-size: 9px;
+    font-weight: bold;
+}
+ 
+
